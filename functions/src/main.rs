@@ -74,6 +74,21 @@ impl MyStruct {
     }
 }
 
+//you can also implement functions for enums in the same way
+enum MyEnum {
+    A,
+    B,
+}
+
+impl MyEnum {
+    fn newA() -> MyEnum {
+        MyEnum::A
+    }
+    fn newB() -> MyEnum {
+        MyEnum::B
+    }
+}
+
 fn main() {
     println!("5 doubled is {}", double(5));
     println!("5 tripled is {}", triple(5));
@@ -93,4 +108,6 @@ fn main() {
     b.increment_first_by(5);
     println!("b.first = {:?}", b.first());
     println!("b.second = {:?}", b.second());
+
+    let c = MyEnum::newA();
 }
