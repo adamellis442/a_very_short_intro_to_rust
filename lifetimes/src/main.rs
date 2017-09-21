@@ -28,4 +28,15 @@ fn main() {
     let b = 42;
     foo(b); //Rust can copy b into the function here
     foo(b); //so that b is still alive by this point in time
+
+    //another example
+    //here we borrow b
+    let mut d = &b;
+    {
+        //in this code block we define a new variable
+        let e = 59;
+        //now set d to borrow from e
+        d = &e;
+    }
+    //this won't compile because e doesn't live as long as d does
 }
