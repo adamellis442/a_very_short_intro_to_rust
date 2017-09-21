@@ -20,7 +20,7 @@ fn main() {
         b: i32,
     }
     //since MyStruct don't have an orderable trait this won't compile
-    let a = MyStruct { a: 1, b: 1 };
+    /*let a = MyStruct { a: 1, b: 1 };
     let b = MyStruct { a: 2, b: 2 };
-    println!("min(a,b)={:?}", min(a, b));
+    println!("min(a,b)={:?}", min(a, b));*/
 }
