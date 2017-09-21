@@ -6,6 +6,6 @@ do
 	base=`dirname $s`
 	echo $base
 	cd $base
-	cargo build
+	cargo clean
 	cd $curDir
 done
